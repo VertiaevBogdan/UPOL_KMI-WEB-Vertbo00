@@ -1,0 +1,278 @@
+/*zeroing*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1.5;
+    font-size: 0.9em;
+    color: #555555;
+    font-family: "Montserrat", "Roboto";
+    font-weight: 400;
+}
+
+.universal-h2--title {
+    color: #0b0b15;
+    font-size: 2em;
+    font-weight: 900;
+    margin: 1em 0 0.5em 0;
+}
+
+.universal-h3--title {
+    color: #0b0b15;
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-bottom: 1em;
+    display: inline;
+    height: 1em;
+}
+
+h4 {
+    font-weight: 900;
+    font-size: 1em;
+    margin-bottom: 2em;
+    color: #0b0b15;
+}
+
+.typical-paragraph {
+    margin-bottom: 1em;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+._container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 2em;
+    box-sizing: content-box;
+}
+
+/*--Header---------------------*/
+
+.header {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+
+/*header::after {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    width: 50%;*/
+/*    height: 100%;*/
+/*    !*border-radius: 0 0 0 0;*!*/
+/*    background-color: #ff9301;*/
+/*    transform: translateX(10%);*/
+/*}*/
+
+.header-container {
+    display: flex;
+    min-height: 4vw;
+    align-items: center;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.menu {
+    padding: 5px 0;
+}
+
+.header-menu {
+    margin: 0 2em 0 0;
+}
+
+.menu_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu_item:not(:last-child) {
+    margin: 0 2em 0 0;
+}
+
+.menu_link {
+    color: #555555;
+    font-weight: 400;
+    line-height: calc(24 / 14 * 100%);
+}
+
+.header_inf {
+    margin: 4vw 0;
+    font-weight: 900;
+}
+
+.header_inf h1 {
+    font-size: 6em;
+    color: #0b0b15;
+}
+
+.header_inf span {
+    color: #ff9301;
+    font-size: 2em;
+    display: block;
+}
+
+._inf-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 2em;
+    box-sizing: content-box;
+}
+
+.inf_text {
+    width: 45em;
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+.header_first_inf {
+    font-weight: 500;
+    margin-top: 4vw;
+    color: #0b0b15;
+}
+
+.main {
+    margin-top: 4vw;
+}
+
+.biography {
+    display: flex;
+    height: 40ch;
+    padding: 6em 0 0 0;
+}
+
+.biography-wrap {
+    padding-bottom: 2em;
+}
+
+.color--wrap {
+    background-color: #eeeeee;
+}
+
+.biography__secondary-container {
+    width: 55%;
+    margin: 2em 0 0 15%;
+}
+
+.img-little-avatar {
+    background: #ff9301 url("../img/avatar_fem.svg") no-repeat center;
+    background-size: 100%;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+}
+
+.after-img-text {
+    color: #ff9301;
+}
+
+.img-block {
+    text-align: center;
+}
+
+.border-line {
+    background: url("../img/border-dark.png") repeat-x;
+    background-size: 15%;
+    height: 1.5em;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/*---------------------------------------------------------------------------- */
+.what-i-do {
+    height: 80ch;
+}
+
+
+.__what-i-do-card {
+    width: 25em;
+    height: 20em;
+    background-color: #f7f7ff;
+    border-radius: 5%;
+    justify-items: center;
+}
+
+.__what-i-do-awards-content {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 1em;
+}
+
+.what-i-do--h3 {
+    margin-top: 2em;
+}
+
+.h4 {
+    margin: 2em 0 2em 2em;
+}
+
+.what-i-do-text {
+    margin: 2em 0 2em 2em;
+}
+
+.little-background-img {
+    width: 10em;
+    height: 7em;
+    background: #ff9301 no-repeat 2em 1em / 45%;
+    border-radius: 10% 5% 180% 90%/ 10% 10% 140% 90%;
+}
+
+.__what-i-do-card--pencil {
+    background-image: url("../img/pencil-alt-solid.svg");
+}
+
+.__what-i-do-card--desktop {
+    background-image: url("../img/desktop-solid.svg");
+}
+
+.__what-i-do-card--bullseye {
+    background-image: url("../img/bullseye-solid.svg");
+}
+
+.__what-i-do-card--awards {
+    height: 10em;
+}
+
+.awards-wrap {
+    padding: 0;
+}
+
+.little-background-img--awards-form {
+    background-image: url("../img/trophy-solid.svg");
+    background-color: unset;
+}
