@@ -322,4 +322,47 @@ h4 {
     margin: 1em 0 2em 0;
 }
 
+.time-exp {
+    border-right: 0.2em solid #555555;
+    width: 20em;
+    height: 80%;
+    margin: auto 0;
+}
 
+/*---My-portfolio-------------------------------------------*/
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) auto;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.block {
+    background-color: lightblue;
+    width: 28em;
+    height: 15em;
+}
+
+.glass--block {
+    background-color: unset;
+    height: 10em;
+}
+
+.date-portfolio {
+    font-size: 0.9em;
+}
+
+.h4 {
+    margin: 2em 0 0 0;
+}
+
+.my-portfolio-h3 {
+    margin-left: 0;
+}
+
+/*---Contact----Ебучий рот, нужно дописать код---------------------------*/
+
+.contact_wrap {
+    height: 60ch;
+}
