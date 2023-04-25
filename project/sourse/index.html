@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -11,9 +11,9 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="header_inf _inf-container">
-                <p class="header_first_inf">Hello, My name is</p>
+        <header class="header _container">
+            <figure class="header_inf _inf-container">
+                <figcaption class="header_first_inf">Hello, My name is</figcaption>
                 <h1>Jane Doe </h1>
                 <span>Full-Stack Developer</span>
                 <p class="inf_text">
@@ -22,12 +22,9 @@
                     quos repellendus.
                 </p>
 
-            </div>
-            <!--------------------------------------------------->
+            </figure>
+
             <div class="header-container _container">
-<!--                <div class="avatar">-->
-<!--                    <img src="img/avatar_fem.svg" alt="" class="header_img">-->
-<!--                </div>-->
                 <nav class="header-menu menu">
                     <ul class="menu_list">
                         <li class="menu_item">
@@ -80,17 +77,18 @@
                             quaerat quam.
                         </p>
                     </div>
+                    <div class="border-line"></div>
                 </article>
-                <div class="border-line"></div>
+
             </section>
-            <!---------------------------------------------------------------->
+
             <section class="what-i-do-wrap color--wrap">
                 <div class="what-i-do _container">
                     <h3 class="universal-h3--title what-i-do--h3">What I do?</h3>
                     <div class="services __what-i-do-awards-content">
                         <article class="__what-i-do-card ">
                             <div class="little-background-img __what-i-do-card--pencil center_img"></div>
-                            <h4 class="h4">Web Design</h4>
+                            <h4 class="h4-what">Web Design</h4>
                             <p class="what-i-do-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Alias aliquam dicta est in molestiae necessitatibus nesciunt
@@ -99,7 +97,7 @@
                         </article>
                         <article class="__what-i-do-card">
                             <div class="little-background-img __what-i-do-card--desktop center_img"></div>
-                            <h4 class="h4">Web Development</h4>
+                            <h4 class="h4-what">Web Development</h4>
                             <p class="what-i-do-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Alias aliquam dicta est in molestiae necessitatibus nesciunt
@@ -108,7 +106,7 @@
                         </article>
                         <article class="__what-i-do-card">
                             <div class="little-background-img __what-i-do-card--bullseye center_img"></div>
-                            <h4 class="h4">Seo Marketing</h4>
+                            <h4 class="h4-what">Seo Marketing</h4>
                             <p class="what-i-do-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Alias aliquam dicta est in molestiae necessitatibus nesciunt
@@ -118,7 +116,7 @@
                     </div>
                 </div>
             </section>
-            <!---------------------------------------------------------------->
+
             <section class="awards color--wrap">
                 <div class="awards_wrap _container">
                     <h3 class="universal-h3--title awards-title">Awards</h3>
@@ -144,7 +142,7 @@
                     </div>
                 </div>
             </section>
-            <!---------------------------------------------------------------->
+
             <section class="experience">
                 <div class="experience-wrap _container">
                     <h3 class="experience_title universal-h3--title">
@@ -191,7 +189,7 @@
                     </article>
                 </div>
             </section>
-            <!---------------------------------------------------------------->
+
             <section class="my-portfolio _container">
                 <h3 class="universal-h3--title">My Portfolio</h3>
                 <div class="grid-container">
@@ -260,10 +258,12 @@
         </main>
         <footer>
             <section class="contact color--wrap">
+                <div class="only-for-contact-container _container">
+                    <h3 class="universal-h3--title contact--title">Contact</h3>
+                </div>
                 <article class="contact_wrap _container">
-                        <h3 class="universal-h3--title">Contact</h3>
                         <div class="get-in-touch-left">
-                            <h4 class="h4">
+                            <h4 class="h4 h4--what-is-your-story-top">
                                 What's your story?
                                 Get in touch
                             </h4>
@@ -273,28 +273,43 @@
                             </p>
                             <div class="touch-content-box">
                                 <div class="touch-img touch-img--geo"></div>
-                                <h4 class="h4">Lorem ipsum dolor sit amet,
+                                <h4 class="h4 h4--what-is-your-story">First ipsum dolor sit amet,
                                     consectetur adipisicing elit.
                                 </h4>
                             </div>
                             <div class="touch-content-box">
                                 <div class="touch-img touch-img--mail"></div>
-                                <h4 class="h4">Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit.
+                                <h4 class="h4 h4--what-is-your-story">support@domain.com
                                 </h4>
                             </div>
                             <div class="touch-content-box">
                                 <div class="touch-img touch-img--phone"></div>
-                                <h4 class="h4">Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit.
+                                <h4 class="h4 h4--what-is-your-story">555-2368
                                 </h4>
                             </div>
                         </div>
                         <div class="get-in-touch-right">
-                            <h4 class="h4">Say Something</h4>
+                            <h4 class="h4 h4-get-in-touch">Say Something</h4>
+                            <form>
+                                <input type="text" class="name" placeholder="Full name">
+                                <input type="text" class="email" placeholder="Email address">
+                                <input type="text" class="subject" placeholder="Subject">
+                                <textarea class="comment" placeholder="Type comment"> </textarea>
+                                <button name="button">Send Massage</button>
+                            </form>
                         </div>
                 </article>
+                <div class="map-wrap _container">
+                    <div class="map">
+                        <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d646.563335389765!2d17.252855426920437!3d49.592971799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47124e8ad5edd541%3A0xb0c49f1a90ddd6c1!2sOlomouck%C3%A1%20citadela!5e0!3m2!1sru!2scz!4v1681799068386!5m2!1sru!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </section>
+            <div class="icon-section _container">
+                <div class="footer-icon footer-icon--twitter"></div>
+                <div class="footer-icon footer-icon--facebook"></div>
+                <p>@ Lorem ipsum dolor sit amet 2022</p>
+            </div>
         </footer>
     </div>
     <script src="./JS/script.js"></script>
