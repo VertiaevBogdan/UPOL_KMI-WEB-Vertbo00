@@ -77,7 +77,6 @@ h4 {
 }
 
 /*--Header---------------------*/
-
 .header {
     position: relative;
     width: 100%;
@@ -99,9 +98,9 @@ h4 {
     padding: 5px 0;
 }
 
-.header-menu {
-    margin: 0 2em 0 0;
-}
+/*.header-menu {*/
+/*    margin: 0 2em 0 0;*/
+/*}*/
 
 .menu_list {
     display: flex;
@@ -116,6 +115,23 @@ h4 {
     color: #555555;
     font-weight: 400;
     line-height: calc(24 / 14 * 100%);
+    position: relative;
+    padding-bottom: 0.5em;
+}
+
+.menu_link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ff9301;
+    transition: .2s;
+}
+
+.menu_link:hover::before {
+    width: 100%;
 }
 
 .header_inf {
@@ -152,7 +168,6 @@ h4 {
     margin-top: 4vw;
     color: #0b0b15;
 }
-
 
 .main {
     margin-top: 4vw;
@@ -203,9 +218,6 @@ h4 {
     }
 }
 
-@media (max-width: 959px) and (min-width: 560px) {
-    
-}
 
 .img-little-avatar {
     background: #ff9301 url("../img/avatar_fem.svg") no-repeat center;
@@ -228,7 +240,7 @@ h4 {
     background-size: 15%;
     height: 1.5em;
     max-width: 1140px;
-    margin: 0 auto;
+    margin:0 auto;
 }
 /*----main------------------------------------------------------------------------ */
 .what-i-do {
@@ -241,7 +253,18 @@ h4 {
     background-color: #f7f7ff;
     border-radius: 0.3em;
     justify-items: center;
+    /*position: relative;*/
 }
+
+/*.__what-i-do-card::before{*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    background-color: #ff9301;*/
+/*    border-radius: 50%;*/
+/*    width: 10em;*/
+/*    height: 10em;*/
+/*    left: 1em;*/
+/*}*/
 
 @media (max-width: 1199px) and (min-width: 960px) {
     .__what-i-do-card {
@@ -249,7 +272,7 @@ h4 {
         height: 22em;
     }
     .__what-i-do-awards-content {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
@@ -259,12 +282,6 @@ h4 {
     display: flex;
     margin-top: 1em;
 }
-
-/*@media (max-width: 1200px) {*/
-/*    .__what-i-do-awards-content {*/
-/*        flex-direction: column;*/
-/*    }*/
-/*}*/
 
 .what-i-do--h3 {
     margin-top: 2em;
@@ -458,6 +475,7 @@ button {
 
 .h4--what-is-your-story {
     margin: 1em;
+    text-indent: 2em;
 }
 
 .h4--what-is-your-story-top {
@@ -470,22 +488,49 @@ button {
     background-repeat: no-repeat;
     margin:  auto 0;
 }
-/*отцентрировать картинки*/
-.touch-img--geo {
-    background-image: url("../img/map-marker-alt-solid.svg");
-}
-
-.touch-img--mail {
-    background-image: url("../img/envelope-regular.svg");
-}
-
-.touch-img--phone {
-    background-image: url("../img/mobile-alt-solid.svg");
-}
 
 .touch-content-box {
     display: flex;
+    position: relative
 }
+/*создать картинки с помощью before*/
+/*сократить запись*/
+
+.touch-content-box--geo::before {
+    content: url("../img/map-marker-alt-solid.svg");
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    top: 0.5em;
+}
+
+.touch-content-box--mail::before {
+    content: url("../img/envelope-regular.svg");
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    top: 0.5em;
+}
+
+.touch-content-box--phone::before {
+    content: url("../img/mobile-alt-solid.svg");
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    top: 0.5em;
+    left: 0.2em;
+}
+/*.touch-img--geo {*/
+/*    background-image: url("../img/map-marker-alt-solid.svg");*/
+/*}*/
+
+/*.touch-img--mail {*/
+/*    background-image: url("../img/envelope-regular.svg");*/
+/*}*/
+
+/*.touch-img--phone {*/
+/*    background-image: url("../img/mobile-alt-solid.svg");*/
+/*}*/
 
 .map-frame {
     width: 100%;
@@ -493,6 +538,7 @@ button {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
 }
+
 
 .map-wrap {
     height: 35ch;
@@ -525,3 +571,16 @@ button {
     background: url("../img/facebook-square-brands.svg") 100%;
     background-repeat: no-repeat;
 }
+
+
+/*.bubble::after {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*    background-color: orange;*/
+/*    border-radius: 50%;*/
+/*    position: relative;*/
+/*    left: 5px;*/
+/*    top: -1px;*/
+/*}*/
