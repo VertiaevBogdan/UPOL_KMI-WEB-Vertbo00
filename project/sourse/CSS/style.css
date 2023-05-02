@@ -35,6 +35,7 @@ body {
 	color: #555555;
 	font-family: "Montserrat", "Roboto";
 	font-weight: 400;
+	overflow-x: hidden;
 }
 
 .universal-h2--title {
@@ -48,9 +49,9 @@ body {
 	color: #0b0b15;
 	font-size: 1.5em;
 	font-weight: 900;
-	margin-bottom: 1em;
-	display: inline;
+	margin-bottom: 2em;
 	height: 1em;
+	position: relative;
 }
 
 h4 {
@@ -76,7 +77,6 @@ h4 {
 	padding: 0 2em;
 	box-sizing: content-box;
 }
-
 /*--Header---------------------*/
 .header {
 	position: relative;
@@ -85,6 +85,30 @@ h4 {
 	top: 0;
 	z-index: 50;
 }
+
+.header::before {
+	content: "";
+	width: 65em;
+	height: 65em;
+	position: absolute;
+	background: #ff9301;
+	border-radius: 50%;
+	z-index: -1;
+	top: -100%;
+	left: 58%;
+}
+
+.header::after {
+	content: "";
+	width: 35em;
+	height: 35em;
+	position: absolute;
+	background: url("../img/avatar_fem.svg") center no-repeat;
+	z-index: 100;
+	top: -28%;
+	left: 70%;
+}
+
 
 .header-container {
 	display: flex;
@@ -178,11 +202,16 @@ h4 {
 .biography-wrap {
 	padding-bottom: 2em;
 	overflow: hidden;
+	position: relative;
+	z-index: 50;
 }
 
 .color--wrap {
 	background-color: #eeeeee;
+	position: relative;
+	z-index: 200;
 }
+
 
 .biography__secondary-container {
 	width: 100%;
@@ -238,28 +267,15 @@ h4 {
 	margin: 4em auto 1em auto;
 }
 /*----main------------------------------------------------------------------------ */
-.what-i-do {
-	height: 40ch;
-}
-
 .__what-i-do-card {
 	width: 25em;
 	height: 20em;
 	background-color: #f7f7ff;
 	border-radius: 0.3em;
 	justify-items: center;
-	/*position: relative;*/
+	position: relative;
+	overflow: hidden;
 }
-
-/*.__what-i-do-card::before{*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    background-color: #ff9301;*/
-/*    border-radius: 50%;*/
-/*    width: 10em;*/
-/*    height: 10em;*/
-/*    left: 1em;*/
-/*}*/
 
 @media (max-width: 1199px) and (min-width: 960px) {
 	.__what-i-do-card {
@@ -278,8 +294,10 @@ h4 {
 	margin-top: 1em;
 }
 
-.what-i-do--h3 {
-	margin-top: 2em;
+.__what-i-do-awards-content--low {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .h4-what {
@@ -302,16 +320,16 @@ h4 {
 	background-position: center;
 }
 
-.__what-i-do-card--pencil {
-	background-image: url("../img/pencil-alt-solid.svg");
+.__what-i-do-card--desktop {
+	background-image:url("../img/desktop-solid.svg");
 }
 
-.__what-i-do-card--desktop {
-	background-image: url("../img/desktop-solid.svg");
+.__what-i-do-card--pencil {
+	background-image:url("../img/pencil-alt-solid.svg");
 }
 
 .__what-i-do-card--bullseye {
-	background-image: url("../img/bullseye-solid.svg");
+	background-image: url("../img/bullseye-solid.svg") ;
 }
 
 .__what-i-do-card--awards {
@@ -322,10 +340,6 @@ h4 {
 	text-align: center;
 }
 
-.awards-title {
-	margin-top: 10em;
-}
-
 .little-background-img--awards-form {
 	background-image: url("../img/trophy-solid.svg");
 	background-color: unset;
@@ -333,16 +347,25 @@ h4 {
 	margin: 0 auto;
 }
 
-.awards {
-	height: 30ch;
+.awards-wrap {
+	padding-top: 1em;
 }
 @media (max-width: 959px) and (min-width: 560px) {
-	.__what-i-do-card {
-		width: 12.5em;
-	}
+		.__what-i-do-awards-content {
+			display: flex;
+			flex-direction: column;
+		}
+		.__what-i-do-card {
+			width: 100%;
+			margin-bottom: 2em;
+		}
+		.little-background-img--awards-form {
+			display: flex;
+		}
+		.__what-i-do-card--awards {
+			max-width: 12em;
+		}
 }
-/*ни#уя не работает на маленьком экране, починить*/
-
 /*---experience--------------------------------*/
 
 .experience {
@@ -363,49 +386,36 @@ h4 {
 	width: 20em;
 	height: 80%;
 	margin: auto 0;
+	padding: 3em 1em;
 }
 
+.last-time {
+	background: #ff9301;
+	color: #f7f7ff;
+	border-radius: 5%;
+	display: block;
+	width: 6em;
+	height: 2em;
+	text-align: center;
+	padding-top: 2%;
+	margin-top: 0.5em;
+}
+
+.last-time--variant-2 {
+	background-color: #555555;
+}
+
+.secondary-container {
+	padding: 3em 1em;
+	width: 100%;
+}
+
+.main-text {
+	margin-bottom: 1em;
+	font-weight: bold;
+	color: #0b0b15;
+}
 /*---My-portfolio-------------------------------------------*/
-/*.grid-container {*/
-/*	display: grid;*/
-/*	grid-template-columns: repeat(2, 1fr) auto;*/
-/*	grid-template-rows: repeat(2, 1fr);*/
-/*}*/
-
-/*.block {*/
-/*	background-color: lightblue;*/
-/*	width: 28em;*/
-/*	height: 15em;*/
-/*}*/
-
-/*.glass--block {*/
-/*	background-color: unset;*/
-/*	height: 10em;*/
-/*}*/
-
-/*@media (max-width: 1190px) and (min-width: 960px) {*/
-/*	.block {*/
-/*		width: 22em;*/
-/*	}*/
-/*}*/
-
-/*.date-portfolio {*/
-/*	font-size: 0.9em;*/
-/*}*/
-
-/*.h4 {*/
-/*	margin: 2em 0 0 0;*/
-/*}*/
-
-/*.my-portfolio-h3 {*/
-/*	margin-left: 0;*/
-/*}*/
-
-/*@media (max-width: 959px) and (min-width: 560px) {*/
-/*	.grid-container {*/
-/*	}*/
-/*}*/
-
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
@@ -414,25 +424,12 @@ h4 {
 	justify-content: space-between;
 }
 
-@media (max-width: 1199px) and (min-width: 960px) {
-	.grid {
-		grid-template-columns: repeat(2, 1fr); /* 2 столбика */
-		grid-template-rows: repeat(3, 25em); /* 3 ряда */
-	}
-}
-
-@media screen and (max-width: 560px) {
-	.grid {
-		grid-template-columns: 1fr; /* 1 столбик */
-		grid-template-rows: repeat(6, 25em); /* 6 рядов */
-	}
-}
 
 .grid-item {
 	position: relative;
 	height: 30em;
 	background-color: white;
-	overflow: hidden; /* чтобы скрыть контент, выходящий за границы элемента */
+	overflow: hidden; /
 }
 
 .grid-item::before {
@@ -445,14 +442,42 @@ h4 {
 }
 
 .content {
-	margin-top: 60%;
+	margin-top: 65%;
 	position: absolute;
 	width: 100%;
 	text-align: left;
 }
 
+.content h4  {
+	margin-bottom: 0.5em;
+}
 
-/*---Contact----Ебучий рот, нужно дописать код---------------------------*/
+.content p {
+	margin-top: 0.5em;
+}
+
+.__portfolio_title {
+	margin: 3em 0 2em 0;
+}
+
+@media (max-width: 1199px) and (min-width: 960px) {
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 25em);
+	}
+}
+
+@media (max-width: 560px) {
+	.grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, 25em);
+	}
+
+	.content {
+		margin-top: 16em;
+	}
+}
+/*---Contact----------------------*/
 
 .contact_wrap {
 	height: 60ch;
@@ -513,9 +538,13 @@ button {
 	width: 50%;
 }
 
-.h4--what-is-your-story {
+
+.what-is-your-story {
 	margin: 1em;
-	text-indent: 2em;
+	padding-left: 2em;
+	font-weight: 900;
+	color: #0b0b15;
+	font-style: normal;
 }
 
 .h4--what-is-your-story-top {
@@ -533,15 +562,17 @@ button {
 	display: flex;
 	position: relative;
 }
-/*создать картинки с помощью before*/
-/*сократить запись*/
+
+.touch-content-box--geo {
+	margin-top: 2em;
+}
 
 .touch-content-box--geo::before {
 	content: url("../img/map-marker-alt-solid.svg");
 	position: absolute;
 	width: 2em;
 	height: 2em;
-	top: 0.5em;
+	top: 0.5em
 }
 
 .touch-content-box--mail::before {
@@ -560,17 +591,6 @@ button {
 	top: 0.5em;
 	left: 0.2em;
 }
-/*.touch-img--geo {*/
-/*    background-image: url("../img/map-marker-alt-solid.svg");*/
-/*}*/
-
-/*.touch-img--mail {*/
-/*    background-image: url("../img/envelope-regular.svg");*/
-/*}*/
-
-/*.touch-img--phone {*/
-/*    background-image: url("../img/mobile-alt-solid.svg");*/
-/*}*/
 
 .map-frame {
 	width: 100%;
@@ -611,14 +631,71 @@ button {
 	background-repeat: no-repeat;
 }
 
-/*.bubble::after {*/
-/*    content: "";*/
-/*    display: block;*/
-/*    width: 10px;*/
-/*    height: 10px;*/
-/*    background-color: orange;*/
-/*    border-radius: 50%;*/
-/*    position: relative;*/
-/*    left: 5px;*/
-/*    top: -1px;*/
-/*}*/
+.lower-section {
+	background-color: white;
+}
+
+.bubble::before {
+	content: "";
+	position: absolute;
+	width: 2em;
+	height: 2em;
+	background-color: #ff9301;
+	opacity: 0.5;
+	border-radius: 50%;
+	z-index: -1;
+	top: -0.5em;
+	left: -0.5em;
+}
+
+/*button*/
+.btn {
+	display: block;
+	position: fixed;
+	bottom: 1em;
+	right: 0.5em;
+	z-index: 99;
+	font-size: 18px;
+	background-color: #ff9301;
+	color: white;
+	cursor: pointer;
+	padding: 0.5em;
+	border-radius: 2em;
+}
+
+.scroll-up {
+	position: fixed;
+	right: 2em;
+	bottom: 2em;
+	z-index: 1000;
+	width: 2em;
+	height: 2em;
+	color: #eeeeee;
+	cursor: pointer;
+	visibility: hidden;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 4px #eeeeee;
+	opacity: 0;
+	transition: 0.2s;
+	transform: translateY(2em);
+}
+
+.scroll-up::before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	content: "↑";
+}
+
+.scroll-up-svg {
+}
+
+.scroll-up-path {
+}
+
