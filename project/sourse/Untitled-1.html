@@ -4,30 +4,37 @@
    <meta charset="UTF-8">
    <title>zapocet</title>
    <link href="CSS/style2.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <header class="header">
    <div class="container">
-      <article class="title-block">
-         <p class="pre-title">Hello, My name is</p>
-         <h1 class='name-big'>Jane Doe </h1>
-         <span class='post-title'>Full-Stack Developer</span>
-         <p class="title-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Cumque maxime quasi repellendus reprehenderit repudiandae,
-            sapiente sequi? Fugiat molestiae quisquam tempore.
-         </p>
-      </article>
-      <nav class="menu">
-         <ul>
-            <li><a href="#Biography" class="link">Biography</a></li>
-            <li><a href="#WhatIDo" class="link">What I Do?</a></li>
-            <li><a href="#Awards" class="link">Awards</a></li>
-            <li><a href="#Experience" class="link">Experience</a></li>
-            <li><a href="#MyPortfolio" class="link">My Portfolio</a></li>
-            <li><a href="#Contact" class="link">Contact</a></li>
-         </ul>
-      </nav>
+      <div class="container-box">
+        <div>
+           <article class="title-block">
+              <p class="pre-title">Hello, My name is</p>
+              <h1 class='name-big'>Jane Doe </h1>
+              <span class='post-title'>Full-Stack Developer</span>
+              <p class="title-description">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                 Cumque maxime quasi repellendus reprehenderit repudiandae,
+                 sapiente sequi? Fugiat molestiae quisquam tempore.
+              </p>
+           </article>
+           <nav class="menu">
+              <ul>
+                 <li><a href="#Biography" class="link">Biography</a></li>
+                 <li><a href="#WhatIDo" class="link">What I Do?</a></li>
+                 <li><a href="#Awards" class="link">Awards</a></li>
+                 <li><a href="#Experience" class="link">Experience</a></li>
+                 <li><a href="#MyPortfolio" class="link">My Portfolio</a></li>
+                 <li><a href="#Contact" class="link">Contact</a></li>
+              </ul>
+           </nav>
+        </div>
+         <img src="img/avatar_fem.svg" alt="" class="avatar">
+      </div>
    </div>
 </header>
 
@@ -35,7 +42,7 @@
    <div class="container">
       <div class="biography-wrap">
          <div class="img-block">
-            <img src="img/avatar_fem.svg">
+            <img class="avatar-img" alt="" src="img/avatar_fem.svg">
             <h2 class="name">Jane Doe</h2>
             <p class="post-title-name">Full-Stack Developer</p>
          </div>
@@ -68,35 +75,72 @@
    </div>
 </section>
 
-<section class="what-i-do">
+<section class="what-i-do dark-background">
    <div class="container">
       <h3 class="title">What I do?</h3>
       <div class="cards">
          <article class="card">
-            <div class="svg-what-i-do"></div>
-            <h4 class="card__title">Web Design</h4>
+            <div class="svg-what-i-do">
+               <img src="img/pencil-alt-solid.svg" alt="" class="what-i-do-icon">
+            </div>
+            <h4 class="card-title">Web Design</h4>
             <p class="description">
                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                Alias aliquam dicta est in molestiae necessitatibus nesciunt
                odit perspiciatis rerum voluptatibus!
             </p>
          </article>
-         {/* ...3 */}
+         <article class="card">
+            <div class="svg-what-i-do">
+               <img src="img/desktop-solid.svg" alt="" class="what-i-do-icon">
+            </div>
+            <h4 class="card-title">Web Design</h4>
+            <p class="description">
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+               Alias aliquam dicta est in molestiae necessitatibus nesciunt
+               odit perspiciatis rerum voluptatibus!
+            </p>
+         </article>
+         <article class="card">
+            <div class="svg-what-i-do">
+               <img src="img/bullseye-solid.svg" alt="" class="what-i-do-icon">
+            </div>
+            <h4 class="card-title">Web Design</h4>
+            <p class="description">
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+               Alias aliquam dicta est in molestiae necessitatibus nesciunt
+               odit perspiciatis rerum voluptatibus!
+            </p>
+         </article>
       </div>
    </div>
 </section>
 
-<section class="awards">
+<section class="awards dark-background">
    <div class="container">
       <h3 class="title">Awards</h3>
-      <div class="cards">
-         <article class="card">
-            <div class="card-svg"></div>
+      <div class="awards-cards">
+         <article class="awards-card">
+            <!--<div class="card-svg"></div>-->
+            <img src="img/trophy-solid.svg" alt="" class="awards-card-img">
             <p class="card__title">
                Creative Designer
             </p>
          </article>
-         {/* ...3 */}
+         <article class="awards-card">
+         <!--<div class="card-svg"></div>-->
+            <img src="img/trophy-solid.svg" alt="" class="awards-card-img">
+            <p class="card__title">
+               Creative Designer
+            </p>
+         </article>
+         <article class="awards-card">
+            <!--<div class="card-svg"></div>-->
+            <img src="img/trophy-solid.svg" alt="" class="awards-card-img">
+            <p class="card__title">
+               Creative Designer
+            </p>
+         </article>
       </div>
    </div>
 </section>
@@ -104,81 +148,176 @@
 <section class="experience">
    <div class="container">
       <h3 class="title">Experince</h3>
-      <div class="cards">
-         <article class="card">
-            <div class="time">
-               <span class="card__date">Feb 2021 - Present</span>
-               <p class="card__last-date">Full Time</p>
+      <div class="experience-cards">
+         <article class="experience-card dark-background">
+            <div class="experience-time">
+               <span class="card-date">Feb 2021 - Present</span>
+               <p class="card-last-date">Full Time</p>
             </div>
-            <div class="description">
-               <h3 class="card__title">Google LLC - Sr. Front-end Engineer</h3>
-               <p class="card__description">Lorem ipsum dolor sit amet, consectetur
+            <div class="experience-description">
+               <h3 class="experience-title">Google LLC - Sr. Front-end Engineer</h3>
+               <p class="card-description">Lorem ipsum dolor sit amet, consectetur
                   adipisicing elit. Beatae eius et facilis illum impedit
                   maxime nisi perspiciatis quae sint suscipit?
                </p>
             </div>
          </article>
-         {/* ...3 */}
+         <article class="experience-card dark-background">
+            <div class="experience-time">
+               <span class="card-date">Feb 2021 - Present</span>
+               <p class="card-last-date">Full Time</p>
+            </div>
+            <div class="experience-description">
+               <h3 class="experience-title">Google LLC - Sr. Front-end Engineer</h3>
+               <p class="card-description">Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Beatae eius et facilis illum impedit
+                  maxime nisi perspiciatis quae sint suscipit?
+               </p>
+            </div>
+         </article>
+         <article class="experience-card dark-background">
+            <div class="experience-time">
+               <span class="card-date">Feb 2021 - Present</span>
+               <p class="card-last-date">Full Time</p>
+            </div>
+            <div class="experience-description">
+               <h3 class="experience-title">Google LLC - Sr. Front-end Engineer</h3>
+               <p class="card-description">Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Beatae eius et facilis illum impedit
+                  maxime nisi perspiciatis quae sint suscipit?
+               </p>
+            </div>
+         </article>
+
       </div>
    </div>
 </section>
 
-<div class="my-potrfolio">
+<section class="my-potrfolio">
   <div class="container">
      <h3 class="title">My Portfolio</h3>
-     <div class="cards">
+     <div class="my-portfolio-cards">
         <article class="card-box">
-<!--           <Image src="/media/640x360.png" class='card__image' width={640} height={360} alt='card' />-->
-           <div class="card">
-              <h4 class="card__title">title</h4>
-              <span class="card__date">07/13/2035</span>
-              <p class='card__description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus est
+           <img src="img/640x360.png" alt="" class="img-grid">
+           <div class="my-portfolio-box">
+              <h4 class="card-title">Lorem Ipsum</h4>
+              <span class="card-date">07/13/2035</span>
+              <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus est
                  explicabo facilis, laboriosam laborum magnam</p>
            </div>
         </article>
-        {/* ...6 */}
+        <article class="card-box">
+           <img src="img/640x360.png" alt="" class="img-grid">
+           <div class="my-portfolio-box">
+              <h4 class="card-title">Lorem Ipsum</h4>
+              <span class="card-date">07/13/2035</span>
+              <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus est
+                 explicabo facilis, laboriosam laborum magnam</p>
+           </div>
+        </article>
+        <article class="card-box">
+           <img src="img/640x360.png" alt="" class="img-grid">
+           <div class="my-portfolio-box">
+              <h4 class="card-title">Lorem Ipsum</h4>
+              <span class="card-date">07/13/2035</span>
+              <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus est
+                 explicabo facilis, laboriosam laborum magnam</p>
+           </div>
+        </article>
+        <article class="card-box">
+           <img src="img/640x360.png" alt="" class="img-grid">
+           <div class="my-portfolio-box">
+              <h4 class="card-title">Lorem Ipsum</h4>
+              <span class="card-date">07/13/2035</span>
+              <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus est
+                 explicabo facilis, laboriosam laborum magnam</p>
+           </div>
+        </article>
+        <article class="card-box">
+           <img src="img/640x360.png" alt="" class="img-grid">
+           <div class="my-portfolio-box">
+              <h4 class="card-title">Lorem Ipsum</h4>
+              <span class="card-date">07/13/2035</span>
+              <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus est
+                 explicabo facilis, laboriosam laborum magnam</p>
+           </div>
+        </article>
+        <article class="card-box">
+           <img src="img/640x360.png" alt="" class="img-grid">
+           <div class="my-portfolio-box">
+              <h4 class="card-title">Lorem Ipsum</h4>
+              <span class="card-date">07/13/2035</span>
+              <p class='card-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus est
+                 explicabo facilis, laboriosam laborum magnam</p>
+           </div>
+        </article>
      </div>
   </div>
-</div>
+</section>
 
 
-<footer class="contact">
+<footer class="contact dark-background">
    <div class="container">
       <h3 class="title">Contact</h3>
-      <h4 class="contatitle">Whats your story? Get in touch</h4>
-      <p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eius id labore libero
-         temporibus voluptates.</p>
-      <div class="adress-box">
-         <address class="address">
-            <i class='icon'></i>
-            <p class="adress-in">First ipsum dolor sit amet, consectetur adipisicing elit.</p>
-         </address>
-         {/* ...3 */}
+      <div class="contacts-inner">
+         <div class="contacts-info">
+            <h4 class="contact-title">Whats your story? Get in touch</h4>
+            <p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eius id labore libero
+               temporibus voluptates.</p>
+            <div class="address-box">
+<!--               <address class="address">-->
+<!--                  <i class='icon'></i>-->
+<!--                  <p class="address-in">First ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--               </address>-->
+<!--               <address class="address">-->
+<!--                  <i class='icon'></i>-->
+<!--                  <p class="address-in">First ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--               </address>-->
+<!--               <address class="address">-->
+<!--                  <i class='icon'></i>-->
+<!--                  <p class="address-in">First ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--               </address>-->
+               <address class="address address--geo">
+                  <p class="address-in">First ipsum dolor sit amet, consectetur adipisicing elit.</p>
+               </address>
+               <address class="address address--mail">
+                  <p class="address-in">support@domain.com</p>
+               </address>
+               <address class="address address--phone">
+                  <p class="address-in">555-222222</p>
+               </address>
+            </div>
+         </div>
+         <div class="contacts-feedback">
+            <h4 class="feedback-title">Say Something</h4>
+            <form class="contacts-form">
+               <input type="text" class="email" placeholder="Email address" />
+               <input type="text" class="subject" placeholder="Subject" />
+               <input type="text" class="contact-name" placeholder="Full name" />
+               <textarea class="comment" placeholder="Type comment"> </textarea>
+               <button class="send-massage">Send Massage</button>
+            </form>
+         </div>
       </div>
-      <div class="feedback">
-         <h4 class="feedback__title">Say Something</h4>
-         <form>
-            <input type="text" class="name" placeholder="Full name" />
-            <input type="text" class="email" placeholder="Email address" />
-            <input type="text" class="subject" placeholder="Subject" />
-            <textarea class="comment" placeholder="Type comment"> </textarea>
-            <button name="send">Send Massage</button>
-         </form>
-      </div>
-      <div class="map">
-         {/* <iframe class="map-frame"
+
+      <div class="contacts-map">
+          <iframe class="map-frame"
                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d646.563335389765!2d17.252855426920437!3d49.592971799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47124e8ad5edd541%3A0xb0c49f1a90ddd6c1!2sOlomouck%C3%A1%20citadela!5e0!3m2!1sru!2scz!4v1681799068386!5m2!1sru!2scz"
                      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                     referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+                     referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
    </div>
-   <section class="bottom">
-      <div class="links">
-         <i class="twitter-icon"></i>
-         <i class="facebook-icon"></i>
-      </div>
-      <p>@ Lorem ipsum dolor sit amet 2022</p>
-   </section>
 </footer>
+<section class="bottom">
+   <div class="container">
+      <div class="links">
+         <div class="links-container">
+            <div class="twitter-icon footer-icon"></div>
+            <div class="facebook-icon footer-icon"></div>
+         </div>
+         <p>@ Lorem ipsum dolor sit amet 2022</p>
+      </div>
+   </div>
+</section>
 </body>
 </html>
