@@ -165,9 +165,22 @@ li:not(:last-child) {
 .title {
     font-weight: 900;
     color: #0b0b15;
-    font-size: 1.5em;
+    font-size: 2em;
     position: relative;
     z-index: 5;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #ff9301;
+    opacity: 0.5;
+    border-radius: 50%;
+    z-index: -1;
+    top: 0;
+    left: -0.5em;
 }
 
 .info {
@@ -232,7 +245,6 @@ li:not(:last-child) {
     margin-top: 3em;
     font-size: 1.25em;
     color: #0b0b15;
-
 }
 
 .description {
@@ -254,7 +266,7 @@ li:not(:last-child) {
     background: white;
 }
 
-.card__title {
+.card-awards-title {
     font-size: 1.25em;
 }
 
@@ -288,6 +300,10 @@ section {
     color: white;
 }
 
+.card-last-date-part {
+    background-color:#555555 ;
+}
+
 .experience-description {
     flex: 3 1;
     padding: 1em 1em 1em 2em;
@@ -302,19 +318,9 @@ section {
     color: #0b0b15;
 }
 /*-------my-portfolio---------*/
-
-/*.my-portfolio-cards {*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(3, 1fr);*/
-/*    grid-template-rows: repeat(2, 1fr);*/
-/*    grid-column-gap: 1em;*/
-/*    grid-row-gap: 2em;*/
-/*    margin: 1em 0;*/
-/*}*/
-
 .my-portfolio-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     grid-template-rows: auto;
     grid-column-gap: 1em;
     grid-row-gap: 2em;
@@ -363,6 +369,10 @@ section {
         "comment comment"
         "button  .    ";
     margin-top: 1em;
+}
+
+.contacts-form input, textarea {
+    border: 0.1em solid #555555;
 }
 
 .address {
@@ -456,9 +466,8 @@ input:focus, textarea:focus {
     width: 3em;
     height: 3em;
     background-color: #0b0b15;
-    margin-right: 2em;
+    margin-right: 1em;
 }
-
 
 .links {
     display: flex;
@@ -476,5 +485,121 @@ input:focus, textarea:focus {
 
 .facebook-icon {
     background: url("../img/facebook-square-brands.svg") 100% no-repeat;
+}
+/*---------breakpoints-----------*/
+/*@media screen {*/
+/*    */
+/*}*/
 
+@media screen and (max-width: 960px){
+    .header::before {
+        content: none;
+    }
+    .avatar {
+        display: none;
+    }
+    .biography-wrap {
+        display: block;
+    }
+
+    .menu {
+        margin-bottom: 2em;
+    }
+
+    .img-block {
+        margin: 2em auto;
+    }
+
+    .my-portfolio-cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .contacts-inner {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .menu ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1em;
+        margin-top: 2em;
+    }
+    .link {
+        background: #ff9301;
+        color: white;
+        display: block;
+        padding: 1em;
+        border-radius: 1em;
+        text-align: center;
+        position: relative;
+
+    }
+    li:not(:last-child) {
+        margin: 0;
+    }
+
+    .awards-cards {
+        flex-direction: column;
+    }
+
+    .awards-card {
+        display: flex;
+    }
+
+    .card-awards-title {
+        margin: 1em;
+    }
+    .experience-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-description {
+        margin-top: 1em;
+        padding: 0;
+        border: none;
+    }
+
+    .my-portfolio-cards {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(auto-fit, 1fr);
+    }
+
+    .email {
+        grid-area: email;
+    }
+
+    .contact-name {
+        grid-area: name;
+    }
+
+    .contacts-form {
+        grid-template-areas:
+        ".     .    "
+        "name name"
+        "email email"
+        "subject subject"
+        "comment comment"
+        "comment comment"
+        "button  .    ";
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .links p {
+        margin-top: 0.5em;
+    }
 }
